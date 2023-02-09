@@ -1,0 +1,30 @@
+/*
+scale-> resize elements in 2D space
+transform: scale(); -> syntax
+-scale(sx,sy); -> both axis
+-scale(sx); -> both axis
+-scaleX(sx);
+-scaleY(sy);
+sx-> the amount of resize of the element in horizental direction - numbers(int, zero, decimals)
+sy-> the amount of resize of the element in vertical direction - numbers(int, zero, decimals)
+sx,sy = [0,1] -> decreasing the size
+sx,sy > 1 -> decreasing the size
+*/
+  .wrapper {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed red;
+    margin: 200px auto;
+  }
+  
+  .inner {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    /*Scaling along both axis*/
+    /* transform: scale(2,2); */
+    /* transform: scale(2); */
+    /* transform: scaleX(2); */
+    transform: scaleY(2);
+  }
+  
