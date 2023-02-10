@@ -1,10 +1,7 @@
 /*
-
-transition-property: none | all | property name;
-none -> no prperty will be transistioned
-all -> all transistionable properties will be transitioned
-propert name -> the transition property name
-
+transition-duration: time value -> this value can be second and milisecond s | ms;
+e.g transition-duration: 3s;
+e.g transition-duration: 300ms;
 */
 
 body {
@@ -14,12 +11,6 @@ body {
 .transition {
   width: 100px;
   height: 100px;
-  background-color: blue;
-  /* transition-property: none; */
-  /* transition-property: background-color; */
-  /* transition-property: all; */
-  transition-property: background-color, width, height;
-  transition-duration: 0.5s;
 }
 
 .transition:hover {
