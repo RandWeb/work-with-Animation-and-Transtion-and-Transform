@@ -1,0 +1,18 @@
+
+/*
+transition: [property] [duration] [timing function] [delay]; -> syntax
+transition-proprty: property name
+transition-duration: duration
+transition-timing-function: timing function;
+transition-delay: delay
+*/
+.transition-div {
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+  background-color: red;
+  transition: background-color .5s ;
+}
+.transition-div:hover {
+  background-color: blue;
+}
