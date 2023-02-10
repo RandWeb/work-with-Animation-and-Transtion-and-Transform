@@ -13,7 +13,9 @@ body {
   height: 300px;
   margin: 0 auto;
   background-color: red;
-
+  /* transition-property: all; */
+  transition-property: backgroud-color, width, height;
+  transition-duration: 2s, 3s, 1s;
 }
 
 .transition:hover {
