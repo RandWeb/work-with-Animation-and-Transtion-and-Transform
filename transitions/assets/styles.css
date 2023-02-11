@@ -1,46 +1,20 @@
-/*
-transition-delay: time -> s | ms
-setting time out before transition 
-*/
-
 body {
   text-align: center;
   text-transform: capitalize;
 }
-.transition {
-  width: 150px;
-  margin: 10px;
-  padding: 10px;
-  background-color: red;
-  transition-property: margin-left;
-  transition-duration: 2s;
+.container {
+  text-align: start;
+  width: 800px;
+  margin: 40px auto;
+}
+.rocket {
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  transition: transform 0.5s,margin-left .5s ease .5s;
 }
 
-.container:hover .transition {
-  margin-left: 500px;
-}
-
-.delay1 {
-  /* transition-delay: 2s; */
-  transition-delay: 50ms;
-}
-.delay1 {
-  /* transition-delay: 2s; */
-  transition-delay: 1000ms;
-}
-.delay2 {
-  /* transition-delay: 2s; */
-  transition-delay: 2000ms;
-}
-.delay3 {
-  /* transition-delay: 2s; */
-  transition-delay: 3s;
-}
-.delay4 {
-  /* transition-delay: 2s; */
-  transition-delay: 4s;
-}
-.delay5 {
-  /* transition-delay: 2s; */
-  transition-delay: 5s;
+.container:hover .rocket {
+  transform: rotate(45deg);
+  margin-left: 600px;
 }

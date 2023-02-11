@@ -1,0 +1,22 @@
+/*
+transition-delay: time -> s | ms
+setting time out before transition 
+*/
+
+body {
+  text-align: center;
+  text-transform: capitalize;
+}
+.transition {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  background-color: red;
+  transition: transform 1.5s ease-in-out .2s, width 1.5s ease;
+}
+
+.container:hover .transition {
+  transform: translateX(500px);
+  width: 200px;
+}
+
