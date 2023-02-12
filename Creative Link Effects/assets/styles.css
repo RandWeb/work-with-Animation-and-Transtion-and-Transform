@@ -238,14 +238,14 @@ a {
   width: 100%;
 }
 /**********************************************************/
-.data-swipe-text {
+.data-swipe-text-vertical {
   overflow: hidden;
 }
-.data-swipe-text span {
+.data-swipe-text-vertical span {
   display: inline-block;
   transition: transform 0.5s ease;
 }
-.data-swipe-text::after {
+.data-swipe-text-vertical::after {
   content: attr(data-swipe-text);
   position: absolute;
   bottom: -100%;
@@ -254,9 +254,10 @@ a {
   display: block;
   transition: bottom 0.5s ease;
 }
-.data-swipe-text:hover::after {
+.data-swipe-text-vertical:hover::after {
   bottom: 0;
 }
-.data-swipe-text:hover span {
+.data-swipe-text-vertical:hover span {
   transform: translateY(-100%);
 }
+
