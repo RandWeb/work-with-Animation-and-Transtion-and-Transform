@@ -21,7 +21,7 @@ h2.second {
   background-color: #ff5e33;
 }
 
-.link {
+a {
   display: inline-block;
   position: relative;
   font-size: 48px;
@@ -67,3 +67,33 @@ h2.second {
 .second .link:hover::after {
   transform: scaleY(1);
 }
+
+/*-------------------------------*/
+.left-to-right-effect::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  border-radius: 4px;
+  transition: width .5s ease-in-out;
+}
+.left-to-right-effect:hover:after {
+  width: 100%;
+}
+.right-to-left-effect::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 4px;
+  transition: width .5s ease-out;
+}
+.right-to-left-effect:hover:after {
+    width: 100%;
+  }
