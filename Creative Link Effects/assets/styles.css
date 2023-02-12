@@ -1,6 +1,7 @@
 body {
   background-color: #223e61;
-  font-family: Nunito, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: #fff;
   text-transform: capitalize;
 }
@@ -180,30 +181,82 @@ a {
 }
 
 .top-and-bottom-right-to-left-effect::before {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 5px;
-    top: -4px;
-    right: 0;
-    background-color: gray;
-    border-radius: 4px;
-    transition: width 0.5s ease-out, right 0.5s ease-out;
-  }
-  .top-and-bottom-right-to-left-effect::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 5px;
-    bottom: -4px;
-    right: 0;
-    background-color: gray;
-    border-radius: 4px;
-    transition: width 0.5s ease-out, right 0.5s ease-out;
-  }
-  
-  .top-and-bottom-right-to-left-effect:hover::before,
-  .top-and-bottom-right-to-left-effect:hover::after {
-    width: 100%;
-  }
-  
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: -4px;
+  right: 0;
+  background-color: gray;
+  border-radius: 4px;
+  transition: width 0.5s ease-out, right 0.5s ease-out;
+}
+.top-and-bottom-right-to-left-effect::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: -4px;
+  right: 0;
+  background-color: gray;
+  border-radius: 4px;
+  transition: width 0.5s ease-out, right 0.5s ease-out;
+}
+
+.top-and-bottom-right-to-left-effect:hover::before,
+.top-and-bottom-right-to-left-effect:hover::after {
+  width: 100%;
+}
+
+/*-------------------------------------------**/
+
+.top-and-bottom-reverse-effect::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: -4px;
+  right: 0;
+  background-color: gray;
+  border-radius: 4px;
+  transition: width 0.5s ease-out, right 0.5s ease-out;
+}
+.top-and-bottom-reverse-effect::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: -4px;
+  left: 0;
+  background-color: gray;
+  border-radius: 4px;
+  transition: width 0.5s ease-out, left 0.5s ease-out;
+}
+
+.top-and-bottom-reverse-effect:hover::before,
+.top-and-bottom-reverse-effect:hover::after {
+  width: 100%;
+}
+/**********************************************************/
+.data-swipe-text {
+  overflow: hidden;
+}
+.data-swipe-text span {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+.data-swipe-text::after {
+  content: attr(data-swipe-text);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  display: block;
+  transition: bottom 0.5s ease;
+}
+.data-swipe-text:hover::after {
+  bottom: 0;
+}
+.data-swipe-text:hover span {
+  transform: translateY(-100%);
+}
