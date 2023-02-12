@@ -101,19 +101,51 @@ a {
 
 /****/
 
-.center-to-edge-effect::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 50%;
-    width: 0%;
-    height: 5px;
-    border-radius: 3px;
-    background-color: #223e61;
-    transition: width 0.5s ease-out, left .5s ease-out;
+.center-to-edge-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  width: 0%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #223e61;
+  transition: width 0.5s ease-out, left 0.5s ease-out;
 }
-.center-to-edge-effect:hover:after{
-    width: 100%;
-    left: 0;
+.center-to-edge-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/*--------------------------------------------------*/
+.edge-to-center-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  border-radius: 3px;
+  background-color: gray;
+  transition: width 0.5s ease-out, right 0.5s ease-out;
+}
+.edge-to-center-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  border-radius: 3px;
+  background-color: gray;
+  transition: width 0.5s ease-out, left 0.5s ease-out;
+}
+.edge-to-center-effect:hover::before {
+  width: 50%;
+  left: 1%;
+}
+.edge-to-center-effect:hover::after {
+  width: 50%;
+  right: 1%;
 }
