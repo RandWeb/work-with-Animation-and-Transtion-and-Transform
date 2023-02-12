@@ -2,6 +2,7 @@ body {
   background-color: #223e61;
   font-family: Nunito, sans-serif;
   color: #fff;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -13,11 +14,11 @@ h2 {
   align-items: center;
 }
 
-h2.first {
+h2.odd {
   background-color: #0d757d;
 }
 
-h2.second {
+h2.even {
   background-color: #ff5e33;
 }
 
@@ -29,7 +30,7 @@ a {
   text-decoration: none;
 }
 
-.first .link::after {
+.odd .link::after {
   content: "";
   display: block;
   position: absolute;
@@ -44,12 +45,12 @@ a {
   transition: height 0.15s ease-in-out, opacity 0.15s ease-in-out;
 }
 
-.first .link:hover::after {
+.odd .link:hover::after {
   height: 5px;
   opacity: 1;
 }
 
-.second .link::after {
+.even .link::after {
   content: "";
   display: block;
   position: absolute;
@@ -64,7 +65,7 @@ a {
   transition: transform 0.15s ease-in;
 }
 
-.second .link:hover::after {
+.even .link:hover::after {
   transform: scaleY(1);
 }
 
@@ -78,7 +79,7 @@ a {
   left: 0;
   background-color: red;
   border-radius: 4px;
-  transition: width .5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 .left-to-right-effect:hover:after {
   width: 100%;
@@ -92,8 +93,27 @@ a {
   right: 0;
   background-color: red;
   border-radius: 4px;
-  transition: width .5s ease-out;
+  transition: width 0.5s ease-out;
 }
 .right-to-left-effect:hover:after {
+  width: 100%;
+}
+
+/****/
+
+.center-to-edge-effect::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    width: 0%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #223e61;
+    transition: width 0.5s ease-out, left .5s ease-out;
+}
+.center-to-edge-effect:hover:after{
     width: 100%;
-  }
+    left: 0;
+}
