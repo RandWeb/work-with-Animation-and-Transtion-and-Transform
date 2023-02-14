@@ -68,9 +68,6 @@ h1 {
 }
 
 /**********************************/
-.swip {
-}
-
 .left-fill {
   overflow: hidden;
 }
@@ -108,8 +105,6 @@ h1 {
   right: 0;
 }
 /**********************************/
-.swip {
-}
 
 .top-fill {
   overflow: hidden;
@@ -146,4 +141,72 @@ h1 {
 }
 .bottom-fill:hover:before {
   bottom: 0;
+}
+
+/********************************************/
+.slice-fill {
+overflow: hidden;
+}
+.slice-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffe8ed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+  top: -100%;
+  transition: top 0.5s;
+  z-index: 1;
+}
+.slice-fill::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffe8ed;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  z-index: 0;
+  bottom: -100%;
+  transition: bottom 0.5s;
+  z-index: 1;
+}
+.slice-fill:hover:before {
+  top: -50%;
+}
+.slice-fill:hover::after {
+  bottom: -50%;
+}
+.slice-half-fill{
+  overflow: hidden;
+}
+.slice-half-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffe8ed;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+  top: -100%;
+  transition: top 0.5s;
+  z-index: 1;
+}
+.slice-half-fill::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffe8ed;
+  width: 50%;
+  height: 100%;
+  right: 0%;
+  z-index: 0;
+  bottom: -100%;
+  transition: bottom 0.5s;
+  z-index: 1;
+}
+.slice-half-fill:hover:before {
+  top: 0%;
+}
+.slice-half-fill:hover::after {
+  bottom: 0%;
 }
