@@ -107,5 +107,43 @@ h1 {
 .right-fill:hover:before {
   right: 0;
 }
-.right-fill {
+/**********************************/
+.swip {
+}
+
+.top-fill {
+  overflow: hidden;
+}
+.bottom-fill {
+  overflow: hidden;
+}
+.top-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFE8ed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+  top: -100%;
+  transition: top 0.5s;
+  z-index: 1;
+}
+.bottom-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFE8ed;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  z-index: 0;
+  bottom: -100%;
+  transition: bottom 0.5s;
+  z-index: 1;
+}
+.top-fill:hover:before {
+  top: 0;
+}
+.bottom-fill:hover:before {
+    bottom: 0;
 }
