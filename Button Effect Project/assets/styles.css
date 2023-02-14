@@ -56,7 +56,7 @@ h1 {
   font-size: 4rem;
   font-weight: 800;
 }
-/******************************************/
+/*******************Scale Buton Effect***********************/
 .scale button {
   transition: transform 0.25s ease-in-out;
 }
@@ -67,7 +67,7 @@ h1 {
   transform: scale(0.8);
 }
 
-/**********************************/
+/**********************Swip Fill Left And Right Effects****************/
 .left-fill {
   overflow: hidden;
 }
@@ -104,7 +104,7 @@ h1 {
 .right-fill:hover:before {
   right: 0;
 }
-/**********************************/
+/*****************Swip Fill Bottom And Top Effects********************/
 
 .top-fill {
   overflow: hidden;
@@ -143,7 +143,7 @@ h1 {
   bottom: 0;
 }
 
-/********************************************/
+/**********************Slice Effect In Vertical Direction**************************/
 .slice-fill {
 overflow: hidden;
 }
