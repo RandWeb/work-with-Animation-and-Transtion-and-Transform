@@ -8,48 +8,104 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #eee;
+  background-color: #fff4d2;
   padding: 1rem;
   text-transform: capitalize;
 }
 
-body div {
-  background-color: rgb(180, 220, 234);
+.container {
   width: 90%;
   height: 5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: .5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
 }
-button{
-    font-family: inherit;
-    font-size: 1rem;
-    margin: .5rem;
-    padding: .5rem;
-    text-transform: capitalize;
-    border: 0;
-    background-color: #d2d2d2;
-    outline: none;
-    cursor: pointer;
+.container:nth-child(odd) {
+  background-color: #e5d1fa;
+}
+.container:nth-child(even) {
+  background-color: #ecf2ff;
+}
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0.8rem;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border: 0;
+  background-color: #FFD4D4;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: .2rem;
 }
 .buttons {
   display: flex;
   flex-direction: row;
-
 }
-h1{
-font-size: 4rem;
-font-weight: 800;
+
+.buttons span {
+  z-index: 2;
+  position: relative;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
 }
 /******************************************/
-.scale button{
-    transition: transform .25s ease-in-out;
+.scale button {
+  transition: transform 0.25s ease-in-out;
 }
-.grow:hover{
-    transform: scale(1.2);
+.grow:hover {
+  transform: scale(1.2);
 }
-.shrink:hover{
-    transform: scale(.8);
+.shrink:hover {
+  transform: scale(0.8);
+}
+
+/**********************************/
+.swip {
+}
+
+.left-fill {
+  overflow: hidden;
+}
+.right-fill {
+  overflow: hidden;
+}
+.left-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFE8ed;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  z-index: 0;
+  top: 0;
+  transition: left 0.5s;
+  z-index: 1;
+}
+.right-fill::before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFE8ed;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  z-index: 0;
+  top: 0;
+  transition: right 0.5s;
+  z-index: 1;
+}
+.left-fill:hover:before {
+  left: 0;
+}
+.right-fill:hover:before {
+  right: 0;
+}
+.right-fill {
 }
